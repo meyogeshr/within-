@@ -9,6 +9,9 @@ export default function HomeScreen() {
   const [isFirstLaunch, setIsFirstLaunch] = useState<boolean | null>(null);
 
   useEffect(() => {
+    // Ensure splash screen shows immediately
+    setShowSplash(true);
+
     const checkFirstLaunch = async () => {
       try {
         const value = await AsyncStorage.getItem("hasLaunched");
@@ -28,6 +31,7 @@ export default function HomeScreen() {
     checkFirstLaunch();
   }, []);
 
+  // Always show splash screen first
   if (showSplash) {
     return (
       <SplashScreen onComplete={() => setShowSplash(false)} duration={3000} />

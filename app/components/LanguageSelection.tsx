@@ -12,6 +12,7 @@ import { useRouter } from "expo-router";
 import { ChevronRight } from "lucide-react-native";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../context/LanguageContext";
+import * as Haptics from "expo-haptics";
 
 interface Language {
   id: string;
@@ -36,6 +37,8 @@ const LanguageSelection = ({
     null,
   );
   const [listAnimation] = useState(new Animated.Value(0));
+  const [fadeAnim] = useState(new Animated.Value(0));
+  const [slideAnim] = useState(new Animated.Value(30));
 
   const languages: Language[] = [
     {
@@ -83,24 +86,38 @@ const LanguageSelection = ({
       setSelectedLanguage(currentLang);
     }
 
-    // Animate the list items in sequence
-    Animated.timing(listAnimation, {
-      toValue: 1,
-      duration: 800,
-      useNativeDriver: true,
-    }).start();
+    // Animate the header and list items
+    Animated.parallel([
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 600,
+        useNativeDriver: true,
+      }),
+      Animated.timing(slideAnim, {
+        toValue: 0,
+        duration: 600,
+        useNativeDriver: true,
+      }),
+      Animated.timing(listAnimation, {
+        toValue: 1,
+        duration: 800,
+        useNativeDriver: true,
+      }),
+    ]).start();
   }, [currentLanguage]);
 
   const handleLanguageSelect = (language: Language) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     setSelectedLanguage(language);
     changeLanguage(language.code);
     onLanguageSelected(language);
   };
 
   const handleContinue = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     onContinue();
-    // Navigate to the next screen (auth screens)
-    router.push("/components/AuthScreens");
+    // Navigate to the preference selection screen
+    router.push("/components/PreferenceSelection");
   };
 
   const renderLanguageItem = ({
@@ -127,6 +144,7 @@ const LanguageSelection = ({
         <TouchableOpacity
           className="flex-row items-center p-4 border-b border-gray-200"
           onPress={() => handleLanguageSelect(item)}
+          activeOpacity={0.7}
         >
           <View className="w-10 h-10 rounded-full overflow-hidden mr-4 bg-blue-50">
             <Image
@@ -148,14 +166,20 @@ const LanguageSelection = ({
 
   return (
     <View className="flex-1 bg-gradient-to-b from-blue-50 to-white">
-      <View className="pt-16 px-6 pb-6">
+      <Animated.View
+        className="pt-16 px-6 pb-6"
+        style={{
+          opacity: fadeAnim,
+          transform: [{ translateY: slideAnim }],
+        }}
+      >
         <Text className="text-3xl font-bold text-center mb-2 text-blue-600">
           {t("language.title")}
         </Text>
         <Text className="text-gray-500 text-center mb-6">
           {t("language.subtitle")}
         </Text>
-      </View>
+      </Animated.View>
 
       <FlatList
         data={languages}
@@ -170,6 +194,7 @@ const LanguageSelection = ({
           className={`py-4 px-6 rounded-full flex-row items-center justify-center ${selectedLanguage ? "bg-blue-500" : "bg-gray-300"}`}
           onPress={handleContinue}
           disabled={!selectedLanguage}
+          activeOpacity={0.8}
         >
           <Text className="text-white font-bold text-lg mr-2">
             {t("language.continue")}

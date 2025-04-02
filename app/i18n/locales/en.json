@@ -67,6 +67,9 @@
     "locationBasedAlerts": "Location-based Alerts",
     "privacyNote": "You can change these settings anytime in your profile",
     "next": "Next",
-    "finish": "Finish Setup"
+    "finish": "Finish Setup",
+    "whatLookingFor": "What are you looking for?",
+    "selectPreferences": "Select what matters most to you",
+    "continue": "Continue"
   }
 }

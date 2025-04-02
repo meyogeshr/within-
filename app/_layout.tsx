@@ -40,10 +40,13 @@ export default function RootLayout() {
       <ThemeProvider value={DefaultTheme}>
         <Stack
           screenOptions={({ route }) => ({
-            headerShown: !route.name.startsWith("tempobook"),
+            headerShown: false, // Hide header on all screens
+            animation: "fade", // Add smooth fade transition between screens
           })}
         >
-          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="index" />
+          <Stack.Screen name="components/AuthScreens" />
+          <Stack.Screen name="components/UserPreferences" />
         </Stack>
         <StatusBar style="auto" />
       </ThemeProvider>
