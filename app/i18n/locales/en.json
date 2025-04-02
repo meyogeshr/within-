@@ -1,0 +1,72 @@
+{
+  "appName": "Within",
+  "tagline": "Your local world at your fingertips",
+  "language": {
+    "title": "Choose Your Language",
+    "subtitle": "You can change this later in settings",
+    "continue": "Continue"
+  },
+  "auth": {
+    "welcomeBack": "Welcome Back",
+    "createAccount": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "forgotPassword": "Forgot Password?",
+    "login": "Login",
+    "signup": "Sign up",
+    "orContinueWith": "or continue with",
+    "orSignUpWith": "or sign up with",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "agreeToTerms": "I agree to the",
+    "termsAndConditions": "Terms & Conditions",
+    "resetPassword": "Reset Password",
+    "resetPasswordDesc": "Enter your email and we'll send you a link to reset your password",
+    "sendResetLink": "Send Reset Link",
+    "passwordResetSent": "Password Reset Email Sent",
+    "checkEmail": "Check your email for a link to reset your password",
+    "backToLogin": "Back to Login",
+    "enterEmail": "Enter your email",
+    "enterPassword": "Enter your password",
+    "createPassword": "Create a password",
+    "confirmYourPassword": "Confirm your password",
+    "enterFullName": "Enter your full name"
+  },
+  "passwordStrength": {
+    "weak": "Weak",
+    "medium": "Medium",
+    "good": "Good",
+    "strong": "Strong"
+  },
+  "errors": {
+    "fillAllFields": "Please fill in all fields",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "agreeToTerms": "Please agree to the terms and conditions",
+    "enterEmail": "Please enter your email address"
+  },
+  "preferences": {
+    "setLocation": "Set Your Location",
+    "yourLocation": "Your Location",
+    "useCurrentLocation": "Use Current Location",
+    "selectRadius": "Select Radius",
+    "locationDescription": "We'll use this to show you relevant updates and events in your area",
+    "selectInterests": "Select Your Interests",
+    "interestsDescription": "Choose what type of content you'd like to see",
+    "dailyUpdates": "Daily Updates & Events",
+    "updatesDescription": "Local news, events, and community updates",
+    "jobOpportunities": "Job Opportunities",
+    "jobsDescription": "Career opportunities and job listings",
+    "both": "Both Updates & Jobs",
+    "bothDescription": "Get the complete Within experience",
+    "notifications": "Notification Preferences",
+    "notificationsDescription": "Choose how you want to be notified",
+    "pushNotifications": "Push Notifications",
+    "emailUpdates": "Email Updates",
+    "locationBasedAlerts": "Location-based Alerts",
+    "privacyNote": "You can change these settings anytime in your profile",
+    "next": "Next",
+    "finish": "Finish Setup"
+  }
+}

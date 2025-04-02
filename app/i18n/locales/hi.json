@@ -1,0 +1,72 @@
+{
+  "appName": "विदिन",
+  "tagline": "आपकी उंगलियों पर आपकी स्थानीय दुनिया",
+  "language": {
+    "title": "अपनी भाषा चुनें",
+    "subtitle": "आप इसे बाद में सेटिंग्स में बदल सकते हैं",
+    "continue": "जारी रखें"
+  },
+  "auth": {
+    "welcomeBack": "वापसी पर स्वागत है",
+    "createAccount": "खाता बनाएं",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "fullName": "पूरा नाम",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "login": "लॉग इन करें",
+    "signup": "साइन अप करें",
+    "orContinueWith": "या इसके साथ जारी रखें",
+    "orSignUpWith": "या इसके साथ साइन अप करें",
+    "dontHaveAccount": "खाता नहीं है?",
+    "alreadyHaveAccount": "पहले से ही एक खाता है?",
+    "agreeToTerms": "मैं सहमत हूं",
+    "termsAndConditions": "नियम और शर्तें",
+    "resetPassword": "पासवर्ड रीसेट करें",
+    "resetPasswordDesc": "अपना ईमेल दर्ज करें और हम आपको अपना पासवर्ड रीसेट करने के लिए एक लिंक भेजेंगे",
+    "sendResetLink": "रीसेट लिंक भेजें",
+    "passwordResetSent": "पासवर्ड रीसेट ईमेल भेज दिया गया",
+    "checkEmail": "अपना पासवर्ड रीसेट करने के लिए अपने ईमेल में एक लिंक देखें",
+    "backToLogin": "लॉगिन पर वापस जाएं",
+    "enterEmail": "अपना ईमेल दर्ज करें",
+    "enterPassword": "अपना पासवर्ड दर्ज करें",
+    "createPassword": "एक पासवर्ड बनाएं",
+    "confirmYourPassword": "अपने पासवर्ड की पुष्टि करें",
+    "enterFullName": "अपना पूरा नाम दर्ज करें"
+  },
+  "passwordStrength": {
+    "weak": "कमजोर",
+    "medium": "मध्यम",
+    "good": "अच्छा",
+    "strong": "मजबूत"
+  },
+  "errors": {
+    "fillAllFields": "कृपया सभी फ़ील्ड भरें",
+    "passwordsDoNotMatch": "पासवर्ड मेल नहीं खाते",
+    "agreeToTerms": "कृपया नियमों और शर्तों से सहमत हों",
+    "enterEmail": "कृपया अपना ईमेल पता दर्ज करें"
+  },
+  "preferences": {
+    "setLocation": "अपना स्थान सेट करें",
+    "yourLocation": "आपका स्थान",
+    "useCurrentLocation": "वर्तमान स्थान का उपयोग करें",
+    "selectRadius": "त्रिज्या चुनें",
+    "locationDescription": "हम इसका उपयोग आपके क्षेत्र में प्रासंगिक अपडेट और इवेंट दिखाने के लिए करेंगे",
+    "selectInterests": "अपनी रुचियां चुनें",
+    "interestsDescription": "चुनें कि आप किस प्रकार की सामग्री देखना चाहते हैं",
+    "dailyUpdates": "दैनिक अपडेट और इवेंट",
+    "updatesDescription": "स्थानीय समाचार, इवेंट और समुदाय अपडेट",
+    "jobOpportunities": "नौकरी के अवसर",
+    "jobsDescription": "करियर के अवसर और नौकरी की सूची",
+    "both": "अपडेट और नौकरियां दोनों",
+    "bothDescription": "पूर्ण विदिन अनुभव प्राप्त करें",
+    "notifications": "सूचना प्राथमिकताएं",
+    "notificationsDescription": "चुनें कि आप कैसे सूचित होना चाहते हैं",
+    "pushNotifications": "पुश सूचनाएं",
+    "emailUpdates": "ईमेल अपडेट",
+    "locationBasedAlerts": "स्थान-आधारित अलर्ट",
+    "privacyNote": "आप इन सेटिंग्स को अपनी प्रोफ़ाइल में कभी भी बदल सकते हैं",
+    "next": "अगला",
+    "finish": "सेटअप पूरा करें"
+  }
+}

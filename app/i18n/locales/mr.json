@@ -1,0 +1,72 @@
+{
+  "appName": "विदिन",
+  "tagline": "तुमच्या बोटांच्या टोकांवर तुमचे स्थानिक जग",
+  "language": {
+    "title": "तुमची भाषा निवडा",
+    "subtitle": "तुम्ही हे नंतर सेटिंग्जमध्ये बदलू शकता",
+    "continue": "पुढे चला"
+  },
+  "auth": {
+    "welcomeBack": "पुन्हा स्वागत आहे",
+    "createAccount": "खाते तयार करा",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्डची पुष्टी करा",
+    "fullName": "पूर्ण नाव",
+    "forgotPassword": "पासवर्ड विसरलात?",
+    "login": "लॉगिन करा",
+    "signup": "साइन अप करा",
+    "orContinueWith": "किंवा यासह पुढे चला",
+    "orSignUpWith": "किंवा यासह साइन अप करा",
+    "dontHaveAccount": "खाते नाही?",
+    "alreadyHaveAccount": "आधीपासूनच खाते आहे?",
+    "agreeToTerms": "मी सहमत आहे",
+    "termsAndConditions": "नियम आणि अटी",
+    "resetPassword": "पासवर्ड रीसेट करा",
+    "resetPasswordDesc": "तुमचा ईमेल प्रविष्ट करा आणि आम्ही तुम्हाला तुमचा पासवर्ड रीसेट करण्यासाठी एक लिंक पाठवू",
+    "sendResetLink": "रीसेट लिंक पाठवा",
+    "passwordResetSent": "पासवर्ड रीसेट ईमेल पाठवला",
+    "checkEmail": "तुमचा पासवर्ड रीसेट करण्यासाठी तुमच्या ईमेलमध्ये लिंक तपासा",
+    "backToLogin": "लॉगिनकडे परत जा",
+    "enterEmail": "तुमचा ईमेल प्रविष्ट करा",
+    "enterPassword": "तुमचा पासवर्ड प्रविष्ट करा",
+    "createPassword": "पासवर्ड तयार करा",
+    "confirmYourPassword": "तुमचा पासवर्ड पुष्टी करा",
+    "enterFullName": "तुमचे पूर्ण नाव प्रविष्ट करा"
+  },
+  "passwordStrength": {
+    "weak": "कमकुवत",
+    "medium": "मध्यम",
+    "good": "चांगला",
+    "strong": "मजबूत"
+  },
+  "errors": {
+    "fillAllFields": "कृपया सर्व फील्ड भरा",
+    "passwordsDoNotMatch": "पासवर्ड जुळत नाहीत",
+    "agreeToTerms": "कृपया नियम आणि अटींना सहमती द्या",
+    "enterEmail": "कृपया तुमचा ईमेल पत्ता प्रविष्ट करा"
+  },
+  "preferences": {
+    "setLocation": "आपले स्थान सेट करा",
+    "yourLocation": "आपले स्थान",
+    "useCurrentLocation": "वर्तमान स्थान वापरा",
+    "selectRadius": "त्रिज्या निवडा",
+    "locationDescription": "आम्ही आपल्या क्षेत्रातील संबंधित अपडेट्स आणि इव्हेंट्स दाखवण्यासाठी याचा वापर करू",
+    "selectInterests": "आपल्या आवडी निवडा",
+    "interestsDescription": "आपण कोणत्या प्रकारची सामग्री पाहू इच्छिता ते निवडा",
+    "dailyUpdates": "दैनिक अपडेट्स आणि इव्हेंट्स",
+    "updatesDescription": "स्थानिक बातम्या, इव्हेंट्स आणि समुदाय अपडेट्स",
+    "jobOpportunities": "नोकरीच्या संधी",
+    "jobsDescription": "करिअर संधी आणि नोकरी जाहिराती",
+    "both": "अपडेट्स आणि नोकऱ्या दोन्ही",
+    "bothDescription": "संपूर्ण विदिन अनुभव मिळवा",
+    "notifications": "सूचना प्राधान्ये",
+    "notificationsDescription": "आपल्याला कसे सूचित केले जावे ते निवडा",
+    "pushNotifications": "पुश सूचना",
+    "emailUpdates": "ईमेल अपडेट्स",
+    "locationBasedAlerts": "स्थान-आधारित अलर्ट्स",
+    "privacyNote": "आपण या सेटिंग्ज आपल्या प्रोफाइलमध्ये कधीही बदलू शकता",
+    "next": "पुढे",
+    "finish": "सेटअप पूर्ण करा"
+  }
+}
