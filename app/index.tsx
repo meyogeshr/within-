@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
+import { useRouter } from "expo-router";
 import SplashScreen from "./components/SplashScreen";
 import LanguageSelection from "./components/LanguageSelection";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useUserPreference } from "./context/UserPreferenceContext";
 
 export default function HomeScreen() {
+  const router = useRouter();
+  const { userPreference } = useUserPreference();
   const [showSplash, setShowSplash] = useState(true);
   const [isFirstLaunch, setIsFirstLaunch] = useState<boolean | null>(null);
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
 
   useEffect(() => {
     // Ensure splash screen shows immediately
@@ -22,9 +27,14 @@ export default function HomeScreen() {
         } else {
           setIsFirstLaunch(false);
         }
+
+        // Check if user is authenticated
+        const authValue = await AsyncStorage.getItem("isAuthenticated");
+        setIsAuthenticated(authValue === "true");
       } catch (error) {
         console.error("Error checking first launch:", error);
         setIsFirstLaunch(false); // Default to not first launch on error
+        setIsAuthenticated(false);
       }
     };
 
@@ -46,6 +56,13 @@ export default function HomeScreen() {
   if (isFirstLaunch) {
     return <LanguageSelection />;
   }
+
+  // If authenticated and has preference, go to main app
+  useEffect(() => {
+    if (isAuthenticated && userPreference) {
+      router.push("/navigation/AppNavigator");
+    }
+  }, [isAuthenticated, userPreference, router]);
 
   // If not first launch, show auth screens
   return (

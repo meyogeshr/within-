@@ -95,6 +95,9 @@ export default function UserPreferences({
       setStep(step + 1);
     } else {
       onComplete();
+      // Navigate to the main app after completing preferences
+      const router = useRouter();
+      router.push("/navigation/AppNavigator");
     }
   };
 

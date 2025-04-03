@@ -63,6 +63,8 @@ export default function AuthScreens({
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
+      // Save authentication state
+      AsyncStorage.setItem("isAuthenticated", "true");
       onAuthenticated();
     }, 1500);
   };
@@ -89,6 +91,8 @@ export default function AuthScreens({
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
+      // Save authentication state
+      AsyncStorage.setItem("isAuthenticated", "true");
       onAuthenticated();
     }, 1500);
   };

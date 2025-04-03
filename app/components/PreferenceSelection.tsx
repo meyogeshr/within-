@@ -67,6 +67,11 @@ export default function PreferenceSelection({
       return;
     }
 
+    // Save user preference
+    const preference = selectedPreferences.includes("jobs")
+      ? "jobs"
+      : "updates";
+
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     onComplete(selectedPreferences);
     router.push("/components/UserPreferences");

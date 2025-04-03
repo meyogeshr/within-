@@ -8,6 +8,7 @@ import "react-native-reanimated";
 import "../global.css";
 import { Platform } from "react-native";
 import { LanguageProvider } from "./context/LanguageContext";
+import { UserPreferenceProvider } from "./context/UserPreferenceContext";
 import "./i18n";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -37,19 +38,23 @@ export default function RootLayout() {
 
   return (
     <LanguageProvider>
-      <ThemeProvider value={DefaultTheme}>
-        <Stack
-          screenOptions={({ route }) => ({
-            headerShown: false, // Hide header on all screens
-            animation: "fade", // Add smooth fade transition between screens
-          })}
-        >
-          <Stack.Screen name="index" />
-          <Stack.Screen name="components/AuthScreens" />
-          <Stack.Screen name="components/UserPreferences" />
-        </Stack>
-        <StatusBar style="auto" />
-      </ThemeProvider>
+      <UserPreferenceProvider>
+        <ThemeProvider value={DefaultTheme}>
+          <Stack
+            screenOptions={({ route }) => ({
+              headerShown: false, // Hide header on all screens
+              animation: "fade", // Add smooth fade transition between screens
+            })}
+          >
+            <Stack.Screen name="index" />
+            <Stack.Screen name="components/AuthScreens" />
+            <Stack.Screen name="components/PreferenceSelection" />
+            <Stack.Screen name="components/UserPreferences" />
+            <Stack.Screen name="navigation/AppNavigator" />
+          </Stack>
+          <StatusBar style="auto" />
+        </ThemeProvider>
+      </UserPreferenceProvider>
     </LanguageProvider>
   );
 }
