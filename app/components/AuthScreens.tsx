@@ -61,11 +61,17 @@ export default function AuthScreens({
     setError("");
     setIsLoading(true);
 
+    // Set default user preference to "updates" for demo login
+    const setDemoPreference = async () => {
+      await AsyncStorage.setItem("userPreference", "updates");
+    };
+
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      // Save authentication state
+      // Save authentication state and set demo preference
       AsyncStorage.setItem("isAuthenticated", "true");
+      setDemoPreference();
       onAuthenticated();
     }, 1500);
   };

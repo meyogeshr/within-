@@ -90,6 +90,8 @@ export default function UserPreferences({
     }
   };
 
+  const router = useRouter();
+
   const handleNext = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     if (step < 3) {
@@ -97,7 +99,6 @@ export default function UserPreferences({
     } else {
       onComplete();
       // Navigate to the main app after completing preferences
-      const router = useRouter();
       router.push("/navigation/AppNavigator");
     }
   };

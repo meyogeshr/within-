@@ -25,12 +25,14 @@ interface ProfileModalProps {
   visible: boolean;
   onClose: () => void;
   onLogout: () => void;
+  navigation?: any;
 }
 
 export default function ProfileModal({
   visible,
   onClose,
   onLogout,
+  navigation,
 }: ProfileModalProps) {
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage } = useLanguage();
@@ -45,6 +47,14 @@ export default function ProfileModal({
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     setDarkMode(!darkMode);
     // In a real app, you would apply the dark mode theme here
+  };
+
+  const handleBookmarksPress = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    onClose();
+    if (navigation) {
+      navigation.navigate("Details", { screen: "Bookmarks" });
+    }
   };
 
   return (
@@ -98,7 +108,10 @@ export default function ProfileModal({
                 />
               </View>
 
-              <TouchableOpacity className="flex-row items-center justify-between py-4 border-b border-gray-100">
+              <TouchableOpacity
+                className="flex-row items-center justify-between py-4 border-b border-gray-100"
+                onPress={handleBookmarksPress}
+              >
                 <View className="flex-row items-center">
                   <Bookmark size={20} color="#4B5563" />
                   <Text className="ml-3 text-base">Bookmarks</Text>
