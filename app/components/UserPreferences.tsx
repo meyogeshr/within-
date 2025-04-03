@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Animated,
 } from "react-native";
+import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
 import {
   ArrowLeft,
